@@ -1,0 +1,355 @@
+body{
+   background-image: url('../img/img18.jpg');
+    background-size: cover;
+    background-position: center center;
+    position:relative;
+    top:0;
+    bottom: 0;
+    height:97vh;
+    z-index:-10;
+    color:white; 
+    height:100%;
+}
+.topdiv {
+  overflow: hidden;
+  background-color: #333;
+  width:122.8%;
+  margin-left: -11.4%;
+  margin-top: -1.35%;
+  background-image: url('../img/img17.jpg');
+  font-family:Spectral;
+
+}
+
+h1{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: left;
+  text-decoration: none;
+  font-size: px;
+  padding-left: 2%;
+}
+h4{
+    padding-top:-15%;
+    
+    font-size:15px;
+    color:white;
+}
+@media screen and (max-width: 1100px) {
+  .topdiv (:first-child) {display: none;}
+  .topdiv  {
+    float: right;
+    display: block;
+    padding-left: 20%;
+     padding-top: 30%;
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .topdiv.responsive {position: relative;}
+  .topdiv.responsive  {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topdiv.responsive  {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .topdiv (:first-child) {display: none;}
+  .topdiv  {
+    float: right;
+    display: block;
+    padding-left: 20%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topdiv.responsive {position: relative;}
+  .topdiv.responsive  {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topdiv.responsive  {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+#rightdiv{
+    opacity: .;
+    width:300px;
+    margin-left: 84.4%;   
+    padding-left: 1%;
+    padding-top:2.3%; 
+     font-family: Montserrat;
+         background-image: url('../img/img17.jpg');
+}
+@media screen and (max-width:1350px){
+    #container{
+        width:100%;
+    }
+    #leftdiv{
+        width:70%;
+    }
+    #rightdiv{
+        width:30%;
+        float:right;
+        margin-left:5%;  
+    }
+    #topdiv.signup{
+        width:100%;
+       
+    }
+}
+@media screen and (max-width:1024px){
+    
+    #leftdiv{
+        width:100%;
+        padding-top: 100%;
+    }
+    #rightdiv{
+        width:100%;
+        
+    }
+    #topdiv .signup{
+        width:100%;
+        
+    }
+}
+@media screen and (max-width:650px){
+    
+    #leftdiv{
+        width:100%;
+    }
+    #rightdiv{
+        width:100%;
+        float:right;
+    }
+    #topdiv .signup {
+        width:100%;
+        
+    }
+}
+@media screen and (max-width:350px){
+    
+    #leftdiv{
+        width:100%
+    }
+    #rightdiv{
+        width:100%;
+    }
+    #topdiv .signup{
+        width:100%;
+         
+    }
+}
+@media screen and (max-width:10px){
+    
+    #leftdiv{
+        width:100%;
+        float:right;
+    }
+    #rightdiv{
+        width:100%;
+    }
+    #topdiv{
+        width:100%;
+        
+    }
+    .signup{
+        width: 100%;
+    }
+}
+.input{
+    width:100%;
+    font-size: 20px;
+    border:none;
+    outline:none;
+    color:black;
+    border-bottom:1px solid #fff;
+    background:transparent;
+}
+.near{
+    width:50%;
+    height:34px;
+    border:none;
+    outline:none;
+    color:black;
+    border-bottom:1px solid #fff;
+    background:transparent;
+}
+.distance{
+    width:45%;
+    height:34px;
+    border:none;
+    outline:none;
+    color:black;
+    border-bottom:1px solid #fff;
+    background:transparent;
+    margin-left: 55%;
+}
+
+.loginh1{
+    padding-top: 2%;
+    font-size:45px;
+}
+label{
+     
+     font-size:20px;
+     padding-top: 20px
+}
+.button{
+    background-color:#332828;
+    color: white;
+    
+    font-size: 20px; 
+    border-radius:4px;
+    cursor: pointer;
+    
+    margin-top: 4px;
+}
+a{
+    color:black;
+}
+a:hover{
+  color:white;
+
+  text-decoration: none;
+}
+.span{
+    font-size: 20px;
+}
+.para3{
+    font-size:17px;
+    padding-bottom: 18px;
+    padding-top: 33px;
+}
+.signup{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color:#686363;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 4px;
+    color:white;
+}
+
+.span1{
+    font-size: 20px;
+    padding-top: :-40px;
+}
+.countrycode{
+    width:200px;
+    height:34px;
+    border:none;
+    outline:none;
+    color:black;
+    border-bottom:1px solid #fff;
+    background:transparent;
+    padding-top: .1px;
+}
+.mobno{
+    width:83%;
+    height:34px;
+    border:none;
+    outline:none;
+    color:black;
+    border-bottom:1px solid #fff;
+    background:transparent;
+    margin-left: 3%;
+}
+#leftdiv{
+    font-size:30px;
+    margin-top: -30%;
+    text-align: center;
+    color:black;
+    font-family: Yatra One;
+}
+
+#tdiv{
+    width:122.9%;
+    margin-left: -11.4%;
+    margin-top: -2%;
+     background-image: url('../img/img17.jpg');
+     height:10%;
+}
+#rdiv{
+     margin-left: 11%;              
+     width:91.4%;
+     height:500px;
+}
+select{
+    width:30%;
+    padding: 2% 6%;
+    background-color:#722f37;
+    border-color: black;
+     background-image: url('../img/img17.jpg');
+}
+select:hover{
+    background-color: black;
+    color:white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 105px;
+    left: 0;
+     background-image: url('../img/img17.jpg');
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color:white;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color:white ;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+h5{
+  padding-top: 30px;
+  text-align: right;
+}
+#icon{
+  padding-top: -20px;
+}
+#card{
+  text-align: left;
+}
+#card1{
+  padding-top: 30px;
+  padding-left: 50px;
+}

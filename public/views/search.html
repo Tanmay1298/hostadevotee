@@ -1,0 +1,50 @@
+<div>
+    <div class="topdiv">
+        <h1>Host Or Devotee</h1>
+        <h5><i>International Society Of Krishna Conciousness</i></h5>
+        <div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <a ng-click="logOut()">Log Out</a>
+                <a ng-click="editProfile()">Edit Profile</a>
+            </div>
+            <span id="icon" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+    </div>
+</div>
+<div id="rdiv">
+    <select ng-options="each.countryName for each in vm.formData1.allCountries track by each.countryId" ng-model="vm.formData.country" ng-change="vm.getStateById(vm.formData.country.countryId)" id="country">
+        <option value="" selected disabled hidden>Select Country</option>
+    </select>
+    <select ng-options="each.stateName for each in vm.formData1.allStates track by each.stateId" ng-model="vm.formData.state" ng-change="vm.getCityById(vm.formData.state.stateId)" id="state">
+        <option value="" selected disabled hidden>Select State</option>
+    </select>
+    <select ng-options="each.cityName for each in vm.formData1.allCities track by each.cityId" ng-model="vm.formData.city" ng-change="vm.getUser(vm.formData.city)" id="city">
+        <option value="" selected disabled hidden>Select City</option>
+    </select>
+    <br />
+    <br />
+    <div class="w3-container" ng-repeat="user in vm.formData1.allUser">
+        <div class="w3-card-4" style="width:90%; height:180px;">
+            <header class="w3-container w3-black">
+                <h5 id="card">{{user.username}}</h5>
+            </header>
+            <div class="w3-container " id="card1">
+                Mobile ::{{user.countryCode.dial_code}} {{user.phone}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp E.Mail Id :: {{user.email}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Available Rooms :: {{user.rooms}}
+                <br /> Facilities :: {{user.quantity}}
+                <br /> Restrictions :: {{user.foodfacility}}
+                <br />
+            </div>
+            <br/>
+        </div>
+        <br/>
+    </div>
+</div>
+</div>
+<div>
+</div>
+</div>

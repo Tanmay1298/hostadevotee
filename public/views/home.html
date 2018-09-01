@@ -1,0 +1,41 @@
+<nav class="topdiv" id="mytopdiv">
+    <h1>Host Or Devotee</h1>
+    <marquee>
+        <h4><i>International Society Of Krishna Conciousness</i></h4></marquee>
+</nav>
+<div id="rightdiv">
+    <h1 class="loginh1">Log in</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <label class="label">Username:
+        <br>
+    </label>
+    <input type="text" ng-model="vm.formData.email" required class="input">
+    <p ng-show="userForm.name.$invalid && !userForm.name.$pristine">You name is required.</p>
+    <br>
+    <label class="label">Password:
+        <br>
+    </label>
+    <input type="password" ng-model="vm.formData.password" required class="input">
+    <br>
+    <br>
+    <label>
+        <input type="checkbox" checked="checked" ng-model="forgot" name="remember" class="checkbox"> Remember me
+    </label>
+    <br />
+    <button ng-click="getUser(vm.formData)" class="button">LOG IN</button>
+    <br>
+    <br>
+    <span class="span">Forgot <a href="#">password?</a></span>
+    <br />
+    <p class="para3"><b>If You Are Not Registered</b><a href="/signup">Signup</a></p>
+</div>
+<div id="leftdiv">
+    “The peace of God is with them
+    <br /> whose mind and soul are in harmony,
+    <br /> who are free from desire and wrath,
+    <br /> who know their own soul.”
+    <br />
+</div>

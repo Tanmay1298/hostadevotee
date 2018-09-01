@@ -1,0 +1,82 @@
+<div class="signup">
+    <h1 ng-if="vm.formData1.editMode==false">Sign Up</h1>
+    <h1 ng-if="vm.formData1.editMode==true">Edit Profile</h1>
+    <br>
+    <br>
+    <br>
+    <label>Username:
+        <br>
+    </label>
+    <input type="text" ng-model="vm.formData.username" class="input">
+    <br>
+    <label>E-mail:
+        <br>
+    </label>
+    <input type="email" ng-model="vm.formData.email" onchange="validemail(this.value)" id="email" class="input">
+    <br>
+    <label>Password:
+        <br>
+    </label>
+    <input type="password" ng-model="vm.formData.password" id="psw" onkeyup="pswstrength(this.value)" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required class="input">
+    <span id="password_strength"></span>
+    <br>
+    <label>Confirm password:
+        <br>
+    </label>
+    <input type="password" ng-model="vm.formData.repassword" id="repsw" class="input">
+    <br>
+    <label for="phone_no">Phone Number:</label>
+    <br>
+    <!-- <select class="countrycode" ng-model="vm.formData.countryCode" id="">
+        <option data-countryCode="GB" value="44" Selected>UK (+44)</option>
+        <option data-countryCode="US" value="1">USA (+1)</option>
+        <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+    </select> -->
+     <select ng-options="each.code for each in countryCode" ng-model="vm.formData.countryCode" class="input" style="min-width:200px;">
+    </select>
+    <be />
+    <input type="text" ng-model="vm.formData.phone" class="input" placeholder="Input Number" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;">
+    <br>
+    <label>Initiated By</label>
+    <input type="text" ng-model="vm.formData.initiate" class="input">
+    <label ng-class="{'label-in-edit-mode': userEditMode===true}">Country </label>
+    <select ng-options="each.countryName for each in vm.formData1.allCountries track by each.countryId" ng-model="vm.formData.country" ng-change="vm.getStateById(vm.formData.country.countryId)" class="input" style="min-width:200px;">
+    </select>
+    <label ng-class="{'label-in-edit-mode': userEditMode===true}">State </label>
+    <select ng-options="each.stateName for each in vm.formData1.allStates track by each.stateId" ng-model="vm.formData.state" ng-change="vm.getCityById(vm.formData.state.stateId)" class="input" style="min-width:250px;">
+        <option></option>
+    </select>
+    <label ng-class="{'label-in-edit-mode': userEditMode===true}">City </label>
+    <select ng-options="each.cityName for each in vm.formData1.allCities track by each.cityId" ng-model="vm.formData.city" style="min-width:250px;" class="input">
+    </select>
+    <br>
+    <br>
+    <label for="id">Valid Photo ID:</label>
+    <br>
+    <input type="file" ngf-select ng-model="vm.formData.picFile" file-model="myFile" accept="image/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile" class="input">
+    <i ng-show="myForm.file.$error.required">*required</i>
+    <br>
+    <br>
+    <input type="checkbox" ng-model="vm.formData.host">
+    <span class="span1">Do you want be a Host<br><br></span>
+    <div ng-show="vm.formData.host">
+        <label>Distance From Nearby ISKCON (In Miles)</label>
+        <input type="number" ng-model="vm.formData.distIskcon" class="input">
+        <label>Distance From Nearby Airport (In Miles)</label>
+        <input type="number" ng-model="vm.formData.distAirport" class="input">
+        <br>
+        <label>Address PIN Code</label>
+        <input type="text" ng-model="vm.formData.pincode" class="input" maxlength="6">
+        <br>
+        <label>Facilities</label>
+        <textarea type="text" ng-model="vm.formData.facilities" min="1" max="10" class="input" placeholder="Write All The Facilities Here Which You Can Provide To A Guest Like Food, Veichle, A.C Rooms Non A.C Rooms Etc...."></textarea>
+        <br>
+        <label>Restrictions</label>
+        <textarea type="text" ng-model="vm.formData.restrictions" value="Yes" checked placeholder="Write All The Restrictions  Here Which You Should Not Done By Any Guest Like Not To Share Your identity Or Timing Issues  Etc...." class="input">
+        </textarea>
+        <br>
+        <br>
+    </div>
+    <button type="submit" value="submit" ng-if="vm.formData1.editMode==false" ng-click="signup(vm.formData)" onclick="return Validate()" class="button">SIGN UP</</button>
+        <button type="button" ng-if="vm.formData1.editMode==true" ng-click="update(vm.formData)" onclick="return Validate()" class="button">Update</</button>
+</div>
